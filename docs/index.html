@@ -233,8 +233,8 @@ figure {
 <script type="text/javascript" src="../js/hidebib.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
 <head>
-    <title>SLIDE: Controllable Mesh Generation Through Sparse Latent Point Diffusion Models</title>
-    <meta property="og:description" content="SLIDE: Controllable Mesh Generation Through Sparse Latent Point Diffusion Models"/>
+    <title>GetMesh: A Controllable Model for High-quality Mesh Generation and Manipulation</title>
+    <meta property="og:description" content="GetMesh: A Controllable Model for High-quality Mesh Generation and Manipulation"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 
 </head>
@@ -243,7 +243,7 @@ figure {
  <body>
 <div class="container">
     <div class="paper-title">
-      <h1>SLIDE: Controllable Mesh Generation Through Sparse Latent Point Diffusion Models</h1>
+      <h1>GetMesh: A Controllable Model for High-quality Mesh Generation and Manipulation</h1>
     </div>
 
     
@@ -314,20 +314,18 @@ figure {
         <h2>Abstract</h2>
         <hr>
         <p>
-            Mesh generation is of great value in various applications involving computer graphics and virtual content, 
-            yet designing generative models for meshes is challenging due to their irregular data structure and inconsistent topology of meshes in the same category.
-            In this work, we design a novel sparse latent point diffusion model for mesh generation.
-            Our key insight is to regard point clouds as an intermediate representation of meshes,
-            and model the distribution of point clouds instead.
-            While meshes can be generated from point clouds via techniques like Shape as Points (SAP),
-            the challenges of directly generating meshes can be effectively avoided.
-            To boost the efficiency and controlability of our mesh generation method,
-            we propose to further encode point clouds to a set of sparse latent points with point-wise semantic meaningful features,
-            where two DDPMs are trained in the space of sparse latent points to respectively model the distribution of the latent point positions and features at these latent points.
-            We find that sampling in this latent space is faster than directly sampling dense point clouds.
+            Mesh is a fundamental representation of 3D assets in various industrial applications, and is widely supported by professional softwares. 
+            However,
+            due to its irregular structure,
+            mesh creation and manipulation is often time-consuming and labor-intensive. 
+            In this paper 
+            we propose a highly controllable generative model, GetMesh, for
+            mesh generation and manipulation across different categories.
+            By taking a varying number of points as the latent representation, and re-organizing them as triplane representation,
+            GetMesh generates meshes with rich and sharp details, outperforming both single-category and multi-category counterparts.
             Moreover,
-            the sparse latent points also enable us to explicitly control both the overall structures and local details of the generated meshes.
-            Extensive experiments are conducted on the ShapeNet dataset, where our proposed sparse latent point diffusion model achieves superior performance in terms of generation quality and controlability when compared to existing methods.
+            it also enables fine-grained control over the generation process that previous mesh generative models cannot achieve,
+            where changing global/local mesh topologies, adding/removing mesh parts, and combining mesh parts across categories can be intuitively, efficiently and robustly accomplished by adjusting the number, positions or features of latent points.
             </p>
     </section>
 
